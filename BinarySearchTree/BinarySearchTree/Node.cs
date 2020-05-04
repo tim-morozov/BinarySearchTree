@@ -19,9 +19,9 @@ namespace BinarySearchTree
 
         public void AddNode(int newData)
         {
-            if(newData >= data)
+            if (newData >= data)
             {
-                if(rightBranch == null)
+                if (rightBranch == null)
                 {
                     rightBranch = new Node(newData);
                 }
@@ -32,7 +32,7 @@ namespace BinarySearchTree
             }
             else
             {
-                if(leftBranch == null)
+                if (leftBranch == null)
                 {
                     leftBranch = new Node(newData);
                 }
@@ -42,5 +42,6 @@ namespace BinarySearchTree
                 }
             }
         }
+
     }
 }

@@ -25,11 +25,52 @@ namespace BinarySearchTree
 
         public void Search(int data)
         {
+            Node parent = root;
+            Node child = root;
+            bool found;
             while(root != null)
             {
                 if(data != root.data)
                 {
-
+                    if(data >= parent.data)
+                    {
+                        child = parent.rightBranch;
+                        if(child.data == data)
+                        {
+                            Console.WriteLine("Data found!");
+                            break;
+                        }
+                        else if (data >= child.data)
+                        {
+                            parent = child;
+                            child = parent.rightBranch;
+                        }
+                        else
+                        {
+                            parent = child;
+                            child = parent.leftBranch;
+                        }
+                    }
+                    else
+                    {
+                        child = parent.leftBranch;
+                        if(child.data == data)
+                        {
+                            Console.WriteLine("Data found!");
+                            break;
+                        }
+                        else if(data >= child.data)
+                        {
+                            parent = child;
+                            child = parent.rightBranch;
+                        }
+                        else
+                        {
+                            parent = child;
+                            child = parent.leftBranch;
+                        }
+                        
+                    }
                 }
                 else
                 {
