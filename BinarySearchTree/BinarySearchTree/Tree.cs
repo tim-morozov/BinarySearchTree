@@ -22,5 +22,21 @@ namespace BinarySearchTree
                 root.AddNode(data);
             }
         }
+
+        public void Search(int data)
+        {
+            while(root != null)
+            {
+                if(data != root.data)
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Data not found!");
+                    return;
+                }
+            }
+        }
     }
 }
