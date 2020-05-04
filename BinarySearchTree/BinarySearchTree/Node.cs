@@ -8,5 +8,6 @@ namespace BinarySearchTree
 {
     class Node
     {
+        public int data; 
     }
 }
