@@ -12,9 +12,26 @@ namespace BinarySearchTree
         Node rightBranch;
         Node root;
 
-        public Node AddData(int data)
+        public void AddData(int data)
         {
-            
+         if(root == null)
+            {
+                root = new Node();
+                root.data = data;
+            }
+         else
+            {
+                if(data > root.data)
+                {
+                    rightBranch = new Node();
+                    rightBranch.data = data;
+                }
+                else
+                {
+                    leftBranch = new Node();
+                    leftBranch.data = data;
+                }
+            }
         }
     }
 }
