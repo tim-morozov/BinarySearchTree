@@ -35,7 +35,12 @@ namespace BinarySearchTree
                     if(data >= parent.data)
                     {
                         child = parent.rightBranch;
-                        if(child.data == data)
+                        if(child == null)
+                        {
+                            Console.WriteLine("Data does not exist");
+                            break;
+                        }
+                        else if(child.data == data)
                         {
                             Console.WriteLine("Data found!");
                             break;
@@ -54,7 +59,12 @@ namespace BinarySearchTree
                     else
                     {
                         child = parent.leftBranch;
-                        if(child.data == data)
+                        if(child == null)
+                        {
+                            Console.WriteLine("Data does not exist");
+                            break;
+                        }
+                        else if(child.data == data)
                         {
                             Console.WriteLine("Data found!");
                             break;
